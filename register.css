@@ -1,0 +1,212 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #181818;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header .logo img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: #f1f1f1;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 10px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+
+nav a:hover {
+    color: #1e90ff;
+}
+
+/* Container for Form */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 10px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Registration Form */
+.registration-form h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Form Label */
+label {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Form Input Fields */
+input[type="text"],
+input[type="tel"],
+input[type="file"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+/* Terms and Conditions Section */
+.terms {
+    font-size: 14px;
+    color: #bbb;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.terms a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Entry Charge Text */
+.entry-charge {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Payment Button */
+.pay-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .registration-form h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="file"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .pay-button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .logo img {
+        width: 50px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="file"] {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .pay-button {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .registration-form h2 {
+        font-size: 18px;
+    }
+}
