@@ -6,6 +6,13 @@
     <title>Terms and Conditions</title>
     <link rel="icon" href="assets/Taigours E-sports logo.png" type="x-icon">
     <link rel="stylesheet" href="terms.css">
+    <script>
+        // JavaScript function to toggle navigation menu
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('open');
+        }
+    </script>
 </head>
 <body>
     
@@ -15,9 +22,10 @@
         </div>
         <nav>
             <a href="index.html">Home</a>
+            <a href="Matches.html">Matches</a>
             <a href="schedule.html">Schedule</a>
             <a href="leaderboard.html">Leaderboard</a>
-            <a href="register.html">Register</a>
+            <button class="nav-toggle" onclick="toggleNav()">☰</button>
         </nav>
     </header>
 
