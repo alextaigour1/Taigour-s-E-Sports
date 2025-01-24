@@ -1,0 +1,272 @@
+/* General Leaderboard Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #181818;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+  /* Scrollbar styles for WebKit browsers */
+  ::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f4f4f400; /* Background of the track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 5px; /* Rounded corners */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color on hover */
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #969696; /* Color when clicked */
+  }
+
+  /* Firefox scrollbar styling */
+  body {
+    scrollbar-width: thin; /* Options: auto, thin, none */
+    scrollbar-color: #888 #f4f4f4; /* Thumb color, Track color */
+  }
+
+/* Header */
+header {
+  background-color: #000;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header .logo img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 10px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #1e90ff;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+nav.open {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav.open a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+}
+
+header .logo img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Banner Section */
+.banner img {
+  width: 100%;
+  height: auto;
+  filter: brightness(90%);
+  border-bottom: 2px solid #444;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.event-list {
+  padding: 20px;
+  text-align: start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.event-card {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 260px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.event-image {
+  width: 100%;
+  height: 150px;
+  background-color: #f0f0f0;
+  background: url(../assets/E-Sports\ banner.png);
+  background-size: cover;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.event-details h2 {
+  margin: 0;
+}
+
+.capacity {
+  color: #fff;
+  height: 22px;
+  width: 50px;
+  border-radius: 5px;
+  background: #fa6400;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.Map {
+  color: #fff;
+  height: 22px;
+  width: 70px;
+  border-radius: 5px;
+  background-color: #04a141;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+button {
+  color: #fff;
+  background-color: #06cf17;
+  height: 40px;
+  width: auto;
+  border: none;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #00d853;
+  height: 41px;
+}
+
+/* Like Button */
+.like-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.like-button .fa-heart {
+  color: #ff0000;
+}
+
+.like-count {
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .event-card {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header nav a {
+    margin: 5px 0;
+  }
+
+  header .menu-toggle {
+    display: block;
+  }
+
+  header.menu-open nav {
+    display: flex;
+  }
+
+  .event-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 14px;
+  }
+
+  .event-card {
+    width: 250px;
+  }
+}

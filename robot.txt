@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://alextaigour1.github.io/Taigour-s-E-Sports/sitemap.xml
