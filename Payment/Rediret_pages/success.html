@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Success</title>
+    <link rel="icon" href="../../assets/Taigours E-sports logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #bcf7c8;
+        }
+        h1 {
+            color: #4CAF50;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        p {
+            font-size: 1.2em;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes zoomIn {
+            from { width: 50px; }
+            to { width: 100px; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            animation: zoomIn 0.3s ease-in-out;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        a.btn-success {
+            height: 60px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a.btn-success img {
+            margin-right: 10px;
+            height: 30px;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://icons.getbootstrap.com/assets/icons/check-circle.svg" alt="Success"><br>
+    <h1>Transaction Successful</h1>
+    <p>Thank you for your payment. Your transaction was successful.</p>
+    <p>Click <a href="../../index.html">here</a> to return to the home page.</p>
+    <a href="https://wa.me/9779864088891" class="btn btn-success mt-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        Chat with us on WhatsApp
+    </a>
+</body>
+</html>

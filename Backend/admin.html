@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Taigour's E-Sports</title>
+    <link rel="icon" href="../assets/Taigours E-sports logo.png" type="x-icon">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/Taigours E-sports logo.png" alt="Gaming Logo">
+        </div>
+        <div class="menu-toggle">☰ Menu</div>
+        <nav>
+            <a href="../index.html" target="_blank">Home</a>
+            <a href="../Pages/Matches.html" target="_blank">Matches</a>
+            <a href="../Pages/schedule.html" target="_blank">Schedule</a>
+            <a href="../Pages/leaderboard.html" target="_blank">Leaderboard</a>
+            <button id="logout-button" style="display: none;">Logout</button>
+        </nav>
+    </header>
+<div class="top-img">
+    <img src="../assets/Taigours E-sports logo.png" alt="">
+    <h2><u>Taigour's E-Sports - Admin Panel</u></h2>
+</div>
+
+        <!-- Login Form -->
+        <section id="login-section">
+            <form id="login-form">
+                <h2>Admin Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+
+        <section class="admin-panel">
+            <h2>Leaderboard Management</h2>
+            <form id="team-form">
+                <input type="hidden" id="team-id">
+                <label for="team-logo">Team Logo URL:</label>
+                <input type="text" id="team-logo" required>
+                <label for="team-name">Team Name:</label>
+                <input type="text" id="team-name" required>
+                <label for="team-members">Members:</label>
+                <input type="text" id="team-members" required>
+                <label for="total-kills">Total Kills:</label>
+                <input type="number" id="total-kills" required>
+                <label for="captain">Captain:</label>
+                <input type="text" id="captain" required>
+                <button type="submit">Save</button>
+            </form>
+            <div class="table-responsive">
+                <table id="admin-table">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Team Logo</th>
+                        <th>Team Name</th>
+                        <th>Members</th>
+                        <th>Total Kills</th>
+                        <th>Captain</th>
+                        <th>Actions</th>
+                    </tr>
+                    <!-- Rows will be dynamically added here -->
+                </table>
+            </div>
+        </section>
+
+        <section class="admin-panel">
+            <h2>Schedule Management</h2>
+            <form id="schedule-form">
+                <input type="hidden" id="event-id">
+                <label for="event-date">Event Date:</label>
+                <input type="date" id="event-date" required>
+                <label for="event-time">Event Time:</label>
+                <input type="time" id="event-time" required>
+                <label for="event-name">Event Name:</label>
+                <input type="text" id="event-name" required>
+                <button type="submit">Save</button>
+            </form>
+            <div class="table-responsive">
+                <table id="schedule-table">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Event Name</th>
+                        <th>Actions</th>
+                    </tr>
+                    <!-- Rows will be dynamically added here -->
+                </table>
+            </div>
+        </section>
+
+        <section class="admin-panel">
+            <h2>PUBG Event Card Management</h2>
+            <form id="pubg-event-card-form">
+                <input type="hidden" id="pubg-event-card-id">
+                <label for="pubg-event-card-capacity">Capacity:</label>
+                <input type="text" id="pubg-event-card-capacity" required>
+                <label for="pubg-event-card-map">Map:</label>
+                <input type="text" id="pubg-event-card-map" required>
+                <label for="pubg-event-card-name">Event Name:</label>
+                <input type="text" id="pubg-event-card-name" required>
+                <label for="pubg-event-card-time">Time:</label>
+                <input type="time" id="pubg-event-card-time" required>
+                <label for="pubg-event-card-prize-pool">Prize Pool:</label>
+                <input type="text" id="pubg-event-card-prize-pool" required>
+                <label for="pubg-event-card-others">Others:</label>
+                <input type="text" id="pubg-event-card-others" required>
+                <label for="pubg-event-card-participate-link">Participate Link:</label>
+                <input type="url" id="pubg-event-card-participate-link" required>
+                <button type="submit">Save</button>
+            </form>
+            <div class="table-responsive">
+                <table id="pubg-event-card-table">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Capacity</th>
+                        <th>Map</th>
+                        <th>Event Name</th>
+                        <th>Time</th>
+                        <th>Prize Pool</th>
+                        <th>Others</th>
+                        <th>Participate Link</th>
+                        <th>Actions</th>
+                    </tr>
+                    <!-- Rows will be dynamically added here -->
+                </table>
+            </div>
+        </section>
+
+        <section class="admin-panel">
+            <h2>Free Fire Event Card Management</h2>
+            <form id="freefire-event-card-form">
+                <input type="hidden" id="freefire-event-card-id">
+                <label for="freefire-event-card-capacity">Capacity:</label>
+                <input type="text" id="freefire-event-card-capacity" required>
+                <label for="freefire-event-card-map">Map:</label>
+                <input type="text" id="freefire-event-card-map" required>
+                <label for="freefire-event-card-name">Event Name:</label>
+                <input type="text" id="freefire-event-card-name" required>
+                <label for="freefire-event-card-time">Time:</label>
+                <input type="time" id="freefire-event-card-time" required>
+                <label for="freefire-event-card-prize-pool">Prize Pool:</label>
+                <input type="text" id="freefire-event-card-prize-pool" required>
+                <label for="freefire-event-card-others">Others:</label>
+                <input type="text" id="freefire-event-card-others" required>
+                <label for="freefire-event-card-participate-link">Participate Link:</label>
+                <input type="url" id="freefire-event-card-participate-link" required>
+                <button type="submit">Save</button>
+            </form>
+            <div class="table-responsive">
+                <table id="freefire-event-card-table">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Capacity</th>
+                        <th>Map</th>
+                        <th>Event Name</th>
+                        <th>Time</th>
+                        <th>Prize Pool</th>
+                        <th>Others</th>
+                        <th>Participate Link</th>
+                        <th>Actions</th>
+                    </tr>
+                    <!-- Rows will be dynamically added here -->
+                </table>
+            </div>
+        </section>
+    </div>
+    <footer><p>&copy; 2024 Taigours E-Sports Tournament. All Rights Reserved.</p></footer>  
+    <script src="../Scripts/nav.js"></script>
+    <script src="../Scripts/admin.js"></script>
+  </body>
+</html>

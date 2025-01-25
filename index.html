@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Join Taigour's E-Sports – the ultimate destination for gaming enthusiasts! Participate in exciting tournaments for Free Fire, PUBG, and more. Compete, win rewards, and track leaderboards. Discover an immersive gaming community where talent meets opportunity. Register now to elevate your gaming journey!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taigour's E-Sports</title>
+    <link rel="icon" href="assets/Taigours E-sports logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Pages/Styles/styles.css">
+</head>
+<style>
+
+header .menu-toggle {
+            display: none;
+            background: #33333300;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            header nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            header nav a {
+                margin: 5px 0;
+            }
+
+            header .menu-toggle {
+                display: block;
+            }
+
+            header.menu-open nav {
+                display: flex;
+            }
+
+            .donation {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/Taigours E-sports logo.png" alt="Gaming Logo">
+        </div>
+        <button class="menu-toggle" onclick="toggleNav()">☰ Menu</button>
+
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Pages/Matches.html">Matches</a>
+            <a href="Pages/schedule.html">Schedule</a>
+            <a href="Pages/leaderboard.html">Leaderboard</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img src="assets/banner.png" alt="Gaming Banner">
+    </section>
+
+    <section class="live-preview">
+        <h2>Live Match Preview</h2>
+        <iframe width="700" height="415" src="https://www.youtube.com/embed/d0v3CbNUhjo?si=tjYLxClLXiK4H9Ae" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+
+    <section class="subscribe">
+        <h3>Subscribe to Our Channel</h3>
+        <div class="channel">
+            <img src="assets/Taigours E-sports logo.png" alt="Channel Photo">
+            <strong>Taigour's E-Sports Tournament</strong>
+            <button onclick="window.location.href='https://www.youtube.com/channel/UCjHE5JQqSah7K3ocJn_n18Q'">Subscribe</button>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <h3>Follow to Our Facebook Page</h3>
+        <div class="channel">
+            <img src="assets/facebook logo.png" alt="Channel Photo">
+            <strong>Taigour's Group PVT . LTD</strong>
+            <button onclick="window.location.href='https://www.facebook.com/profile.php?id=61565214192491'">Follow</button>
+        </div>
+    </section>
+
+    <section class="donation">
+        <h3>Support Us</h3>
+        <p>Donate via eSewa</p>
+       <a href="Pages/donation.html" target="_blank"><button><b>Donate</b></button></a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Taigours E-Sports Tournament. All Rights Reserved.</p>
+    </footer>
+    <script src="Scripts/admin.js"></script>
+    <script src="Scripts/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+ /* Scrollbar styles for WebKit browsers */
+ ::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f4f4f400; /* Background of the track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 5px; /* Rounded corners */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color on hover */
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #969696; /* Color when clicked */
+  }
+
+  /* Firefox scrollbar styling */
+  body {
+    scrollbar-width: thin; /* Options: auto, thin, none */
+    scrollbar-color: #888 #f4f4f4; /* Thumb color, Track color */
+  }
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .logo img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+header.menu-open nav {
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+header.menu-open nav a {
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin-right: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+}
+
+.admin-panel {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel h2 {
+    margin-top: 0;
+}
+
+.admin-panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-panel form label {
+    margin: 10px 0 5px;
+}
+
+.admin-panel form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admin-panel form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-panel form button:hover {
+    background-color: #555;
+}
+
+.admin-panel #iframe-container {
+    margin-top: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td img {
+    height: 50px;
+}
+
+td button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #ddd;
+}
+
+.top-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f4f4f4;
+}
+
+.top-img img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    background-color: #f4f4f4;
+    gap: 20px;
+}
+
+#login-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+#login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #0056b3;
+}
+
+#logout-button {
+    padding: 10px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header.menu-open nav {
+        display: flex;
+    }
+
+    header nav a {
+        margin: 0;
+        padding: 10px;
+        border-top: 1px solid #444;
+    }
+
+    .admin-panel {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    #login-section {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #login-form {
+        width: 100%;
+        max-width: 400px;
+    }
+}

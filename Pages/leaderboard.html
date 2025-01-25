@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Taigour's E-Sports</title>
+    <link rel="icon" href="../assets/Taigours E-sports logo.png" type="x-icon">
+    <link rel="stylesheet" href="Styles/leaderboard.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header .menu-toggle {
+            display: none;
+            background: none;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            header nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            header nav a {
+                margin: 5px 0;
+            }
+
+            header .menu-toggle {
+                display: block;
+            }
+
+            header.menu-open nav {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/Taigours E-sports logo.png" alt="Gaming Logo">
+        </div>
+        <button class="menu-toggle" onclick="toggleNav()">☰ Menu</button>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="Matches.html">Matches</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="leaderboard.html">Leaderboard</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img src="../assets/banner.png" alt="Leaderboard Banner">
+    </section>
+
+    <section class="leaderboard">
+        <h2>Leaderboard</h2>
+        <div class="table-responsive">
+            <table>
+                <tr>
+                    <th>S.No</th>
+                    <th>Team Logo</th>
+                    <th>Team Name</th>
+                    <th>Members</th>
+                    <th>Total Kills</th>
+                    <th>Captain</th>
+                </tr>
+                <!-- Rows will be dynamically added here -->
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Taigours E-Sports Tournament. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function toggleNav() {
+            document.querySelector('header').classList.toggle('menu-open');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const leaderboardTable = document.querySelector('.leaderboard table');
+            let teams = JSON.parse(localStorage.getItem('teams')) || [];
+
+            function renderLeaderboard() {
+                teams.forEach((team, index) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td><img src="${team.logo}" alt="Team Logo"></td>
+                        <td>${team.name}</td>
+                        <td>${team.members}</td>
+                        <td>${team.kills}</td>
+                        <td>${team.captain}</td>
+                    `;
+                    leaderboardTable.appendChild(row);
+                });
+            }
+
+            renderLeaderboard();
+        });
+    </script>
+    <script src="../Scripts/nav.js"></script>
+</body>
+</html>
